@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/charactersFragment"
-        android:name="com.wisal.android.ui.CharactersFragment"
+        android:name="com.wisal.android.paging.ui.CharactersFragment"
         android:label="Characters"
         tools:layout="@layout/characters_fragment" />
     <fragment
         android:id="@+id/episodesFragment"
-        android:name="com.wisal.android.ui.EpisodesFragment"
+        android:name="com.wisal.android.paging.ui.EpisodesFragment"
         android:label="Episodes"
         tools:layout="@layout/episodes_fragment" />
     <fragment
         android:id="@+id/locationsFragment"
-        android:name="com.wisal.android.ui.LocationsFragment"
+        android:name="com.wisal.android.paging.ui.LocationsFragment"
         android:label="locations_fragment"
         tools:layout="@layout/locations_fragment" />
 

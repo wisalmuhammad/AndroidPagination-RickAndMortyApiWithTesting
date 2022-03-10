@@ -6,7 +6,7 @@
     <data>
         <variable
             name="episode"
-            type="com.wisal.android.models.Episode" />
+            type="com.wisal.android.paging.models.Episode" />
     </data>
 
     <com.google.android.material.card.MaterialCardView

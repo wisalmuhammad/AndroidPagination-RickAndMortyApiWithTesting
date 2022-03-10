@@ -7,7 +7,7 @@
 
         <variable
             name="character"
-            type="com.wisal.android.models.Character" />
+            type="com.wisal.android.paging.models.Character" />
     </data>
 
     <com.google.android.material.card.MaterialCardView

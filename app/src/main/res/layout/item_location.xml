@@ -7,7 +7,7 @@
 
         <variable
             name="location"
-            type="com.wisal.android.models.Location" />
+            type="com.wisal.android.paging.models.Location" />
     </data>
 
     <com.google.android.material.textview.MaterialTextView
