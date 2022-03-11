@@ -25,8 +25,9 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class AppModule {
+class NetworkModule {
 
+    /*
     @Qualifier
     @Retention(AnnotationRetention.RUNTIME)
     annotation class CharactersDatabase
@@ -38,6 +39,8 @@ class AppModule {
     @Qualifier
     @Retention(AnnotationRetention.RUNTIME)
     annotation class RemoteApiService
+
+     */
 
     @Provides
     @Singleton
@@ -80,42 +83,8 @@ class AppModule {
 
     @Provides
     @Singleton
-    @RemoteApiService
     fun provideApiService(retrofit: Retrofit): ApiService {
         return  retrofit.create(ApiService::class.java)
-    }
-
-    @Provides
-    @Singleton
-    @CharactersDatabase
-    fun provideCharacterDatabase(@ApplicationContext context: Context): CharacterDatabase {
-        return CharacterDatabase.getDatabase(context)
-    }
-
-    @Provides
-    @Singleton
-    @EpisodesDatabase
-    fun provideEpisodesDatabase(@ApplicationContext context: Context): EpisodeDatabase {
-        return EpisodeDatabase.getDatabase(context)
-    }
-}
-
-@Module
-@InstallIn(SingletonComponent::class)
-object RepositoryModule {
-
-    @Singleton
-    @Provides
-    fun provideRepositoryImp(
-        @AppModule.RemoteApiService apiService: ApiService,
-        @AppModule.CharactersDatabase characterDatabase: CharacterDatabase,
-        @AppModule.EpisodesDatabase episodeDatabase: EpisodeDatabase
-    ): Repository {
-        return RepositoryImp(
-            apiService = apiService,
-            characterDatabase = characterDatabase,
-            episodesDatabase = episodeDatabase
-        )
     }
 
 }
