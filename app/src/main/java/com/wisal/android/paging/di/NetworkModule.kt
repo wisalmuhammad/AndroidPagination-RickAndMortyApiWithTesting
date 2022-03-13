@@ -4,6 +4,7 @@ import android.content.Context
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.wisal.android.paging.data.db.CharacterDao
 import com.wisal.android.paging.data.db.CharacterDatabase
 import com.wisal.android.paging.data.db.EpisodeDatabase
 import com.wisal.android.paging.data.repository.Repository
@@ -27,7 +28,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 class NetworkModule {
 
-    /*
+/*
     @Qualifier
     @Retention(AnnotationRetention.RUNTIME)
     annotation class CharactersDatabase

@@ -1,9 +1,13 @@
 package com.wisal.android.paging.models
 
+import android.content.ContentValues
 import android.os.Parcelable
+import android.provider.BaseColumns
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
+import com.google.gson.reflect.TypeToken
 import kotlinx.parcelize.Parcelize
 
 
@@ -19,7 +23,7 @@ data class PageInfo(
     val prev: String?
 )
 
-@Entity(tableName = "characters")
+@Entity(tableName = "characters_items")
 data class Character(
     @PrimaryKey @field:SerializedName("id") val id: Int,
     @field:SerializedName("name") val name: String,

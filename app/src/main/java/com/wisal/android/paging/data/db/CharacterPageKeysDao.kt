@@ -1,9 +1,6 @@
 package com.wisal.android.paging.data.db
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.wisal.android.paging.models.CharacterPageKeys
 
 @Dao
@@ -17,5 +14,8 @@ interface CharacterPageKeysDao {
 
     @Query("DELETE FROM characters_keys")
     suspend fun clearRemoteKeys()
+
+    @Query("DELETE FROM characters_keys WHERE id =:id")
+    fun deleteById(id: String): Int
 
 }

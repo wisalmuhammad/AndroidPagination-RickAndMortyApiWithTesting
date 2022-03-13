@@ -29,7 +29,7 @@ abstract class CharacterDatabase: RoomDatabase() {
         private fun buildDatabase(appContext: Context) =
             Room.databaseBuilder(appContext,
                 CharacterDatabase::class.java,
-                "Rick_and_Morty_Api_Characters")
+                "characters_items.db")
                 .fallbackToDestructiveMigration()
                 .build()
     }
