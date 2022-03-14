@@ -4,4 +4,5 @@
     <string name="characters">Characters</string>
     <string name="episodes">Episodes</string>
     <string name="locations">Locations</string>
+    <string name="provider_testing">Content Provider Testing</string>
 </resources>

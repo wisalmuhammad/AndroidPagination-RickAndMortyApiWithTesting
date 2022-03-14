@@ -62,7 +62,7 @@ class RickAndMortyApiContentProvider : ContentProvider() {
         return when(sUriMatcher.match(uri)) {
             URI_CHARACTER_ONE_ITEM_CODE -> SINGLE_CHARACTER_MIME_TYPE
             URI_CHARACTERS_ALL_ITEMS_CODE -> MULTIPLE_CHARACTERS_RECORDS_MIME_TYPE
-            else -> null
+            else -> throw IllegalArgumentException("Unknown Uri get type: $uri")
         }
     }
 

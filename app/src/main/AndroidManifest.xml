@@ -5,6 +5,18 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <!--
+
+    On a separate client side to use the provider data client must add the following permission to it's manifest file along with
+    package visibility tag for Api 30+.
+
+    <uses-permission android:name="com.wisal.android.paging.provider.PERMISSION"/>
+    <queries>
+        <package android:name="com.wisal.android.paging" />
+    </queries>
+
+    -->
+
     <application
         android:name=".BaseApplication"
         android:allowBackup="true"
@@ -14,10 +26,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidPaging">
         <provider
-            android:name=".provider.RickAndMortyApiContentProvider"
+            android:name="com.wisal.android.paging.provider.RickAndMortyApiContentProvider"
             android:authorities="com.wisal.android.paging.provider"
             android:enabled="true"
-            android:exported="true"/>
+            android:exported="true" />
 
         <activity
             android:name=".ui.MainActivity"

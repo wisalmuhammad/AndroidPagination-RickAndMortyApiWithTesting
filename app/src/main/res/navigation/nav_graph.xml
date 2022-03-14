@@ -18,7 +18,13 @@
     <fragment
         android:id="@+id/locationsFragment"
         android:name="com.wisal.android.paging.ui.LocationsFragment"
-        android:label="locations_fragment"
+        android:label="Locations"
         tools:layout="@layout/locations_fragment" />
+
+    <fragment
+        android:id="@+id/contentProviderTestingFragment"
+        android:name="com.wisal.android.paging.ui.ProviderTestingFragment"
+        android:label="Content provider testing"
+        tools:layout="@layout/provider_testing_fragment" />
 
 </navigation>
